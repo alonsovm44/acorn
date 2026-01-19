@@ -1,0 +1,80 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Acorn",
+  "patterns": [
+    { "include": "#keywords" },
+    { "include": "#builtins" },
+    { "include": "#types" },
+    { "include": "#constants" },
+    { "include": "#operators" },
+    { "include": "#strings" },
+    { "include": "#comments" }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.acorn",
+          "match": "\\b(LET|INTENT|GOAL|ENSURE|AVOID|ASSUME|INFER|DEDUCE|CONCLUDE|CONSTRAIN|RELATE|EXPLAIN|ASK|CLARIFY|CONFIRM|SUGGEST|REVISE|MAYBE|UNKNOWN|APPROX|TOLERATE|LIKELY|CONFIDENCE|IF|ELSE|WHILE|FOR|DO|RETURN|BREAK|CONTINUE|FUNCTION|PROC|END|CHECK|GOTO|TRUE|FALSE|NULL)\\b"
+        }
+      ]
+    },
+    "builtins": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.acorn",
+          "match": "\\b(PRINT|INPUT|LEN|RANDOM|RANDOMINT|SQRT|CBRT|SIN|COS|TAN|LOG|EXP|POW|ABS|FLOOR|CEIL|ROUND|MIN|MAX|MAP|FILTER|REDUCE|ASSERT|TIME|SLEEP)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "storage.type.acorn",
+          "match": "\\b(INT|FLOAT|STRING|BOOL|LIST|MAP|SET|ANY|VOID)\\b"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.numeric.acorn",
+          "match": "\\b(PI|E|TAU|PHI|INF|NAN|NULL|TRUE|FALSE)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.acorn",
+          "match": "\\b(AND|OR|NOT|IS|IN|AS|TO)\\b|==|!=|<=|>=|<|>|\\+|\\-|\\*|\\/|\\%|\\^|\\=|\\+=|\\-=|\\*=|\\/=|\\%=|\\^=|\\->|\\:=|\\|\\||&&|!"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.acorn",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.acorn",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.acorn",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.acorn",
+          "begin": "/\\{",
+          "end": "\\}/"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.acorn"
+}
