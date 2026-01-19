@@ -31,7 +31,7 @@
       "patterns": [
         {
           "name": "storage.type.acorn",
-          "match": "\\b(INT|FLOAT|STRING|BOOL|LIST|MAP|SET|ANY|VOID)\\b"
+          "match": "\\b(INT|FLOAT|DOUBLE|STRING|BOOL|COMPLEX|LIST|MAP|SET|ANY|VOID)\\b"
         }
       ]
     },
@@ -39,7 +39,7 @@
       "patterns": [
         {
           "name": "constant.numeric.acorn",
-          "match": "\\b(PI|E|TAU|PHI|INF|NAN|NULL|TRUE|FALSE)\\b"
+          "match": "\\b(PI|E|TAU|PHI|INF|NAN|NULL|TRUE|FALSE|i)\\b"
         }
       ]
     },
