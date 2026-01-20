@@ -1,0 +1,30 @@
+
+INTENT Fibonacci Secuence
+GOAL print the fibonacci sequence up to a limit
+
+LET limit = 20
+
+FUNCTION fib(n)
+{
+    LET a = 0
+    LET b = 1
+    LET i = 0
+
+    WHILE i < n
+    {
+        LET temp = a
+        a = b
+        b = temp + b
+        i = i + 1
+    }
+
+    RETURN a
+}
+
+LET i = 0
+
+WHILE i < limit
+{
+    PRINT "fib(" + i + ") = " + fib(i)
+    i = i + 1
+}
