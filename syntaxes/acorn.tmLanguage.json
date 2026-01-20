@@ -15,7 +15,7 @@
       "patterns": [
         {
           "name": "keyword.control.acorn",
-          "match": "\\b(LET|INTENT|GOAL|ENSURE|AVOID|ASSUME|INFER|DEDUCE|CONCLUDE|CONSTRAIN|RELATE|EXPLAIN|ASK|CLARIFY|CONFIRM|SUGGEST|REVISE|MAYBE|UNKNOWN|APPROX|TOLERATE|LIKELY|CONFIDENCE|IF|ELSE|WHILE|FOR|DO|RETURN|BREAK|CONTINUE|FUNCTION|PROC|END|CHECK|GOTO|TRUE|FALSE|NULL|ALLOC|FREE|NEW|DELETE|REF|DEREF|MOVE|OWN|BORROW|SIZEOF|STACK|HEAP)\\b"
+          "match": "\\b(LET|INTENT|GOAL|ENSURE|AVOID|ASSUME|INFER|DEDUCE|CONCLUDE|CONSTRAIN|RELATE|EXPLAIN|ASK|CLARIFY|CONFIRM|SUGGEST|REVISE|MAYBE|UNKNOWN|APPROX|TOLERATE|LIKELY|CONFIDENCE|IF|ELSE|WHILE|FOR|DO|RETURN|BREAK|CONTINUE|FUNCTION|PROC|END|CHECK|GOTO|NULL|ALLOC|FREE|NEW|DELETE|REF|DEREF|MOVE|OWN|BORROW|SIZEOF|STACK|HEAP)\\b"
         }
       ]
     },
@@ -71,7 +71,13 @@
         {
           "name": "comment.block.acorn",
           "begin": "/\\{",
-          "end": "\\}/"
+          "end": "\\}/",
+          "patterns": [
+            {
+              "name": "comment.block.content.acorn",
+              "match": "[\\s\\S]*?"
+            }
+          ]
         }
       ]
     }
