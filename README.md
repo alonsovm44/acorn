@@ -56,14 +56,16 @@ Acorn is turing complete
 Despite its declarative and semantic nature, Acorn supports:
 
 Variables
-conditions
-loops
-functions
-operations
-memory management
-input output
+1. conditions
+2. loops
+3. functions
+4. operations
+5. memory management
+6. input
+7. output
 EXAMPLE PROGRAMS
 simple calculator
+````
 INTENT compute fibonacci sequence
 GOAL print fibonacci numbers
 
@@ -76,8 +78,10 @@ IF n <= 0 THEN
     PRINT "Invalid number"
     GOTO "start"
 END
+````
 
 list manager
+```
 INTENT analyze numeric data
 GOAL process a sequence safely and clearly
 
@@ -105,8 +109,9 @@ summary.count    = LEN cleaned
 
 PRINT "Summary:"
 PRINT summary
-
+````
 EXAMPLES OF LOW LEVEL INTERACTIONS
+````
 C/C++ like memory management
 INTENT manage memory manually
 ENSURE no memory leaks
@@ -122,8 +127,9 @@ MEMZERO(p, 1024)
 PRINT "Memory allocated and zeroed"
 
 FREE p
-
+````
 Rust like program
+```
 INTENT demonstrate ownership and borrowing
 GOAL manage memory safely without garbage collection
 
@@ -158,7 +164,9 @@ FREE buffer
 
 // Any access after this point is invalid
 ENSURE buffer IS NULL
+````
 Freestanding microkernel
+````
 INTENT build a freestanding microkernel
 GOAL boot, manage memory, schedule tasks
 
@@ -257,3 +265,6 @@ ENSURE no null dereference
 ENSURE no memory overlap
 ENSURE no task escapes kernel space
 ENSURE kernel deterministic
+
+````
+
